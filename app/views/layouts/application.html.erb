@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <% flash.alert.each do |alert| %>
+      <p style="color: #ff0000;"><%= alert %></p>
+    <% end %>
+    <% flash.notice.each do |notice| %>
+      <p style="color: #0000ff;"><%= notice %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,12 @@
-<form action='/users/create' method='post'>
+
+<%= form_tag('/users/create', method: :post) do %>
 
   <input type='text' name='username' placeholder='username'></input>
+  <input type='text' name='email' placeholder='email'></input>
+  <input type='text' name='email_confirmation' placeholder='confirm email'></input>
   <input type='password' name='password' placeholder='password'></input>
-  <input type='password' name='passwordconfirmation' placeholder='confirm password'></input>
+  <input type='password' name='password_confirmation' placeholder='confirm password'></input>
+  <input type='submit' value='create account'></input>
 
-</form>
+<% end %>
+
