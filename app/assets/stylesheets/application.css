@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +14,58 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0px;
+  background-color: #ddeeff;
+}
+
+
+#bar {
+  width: 100%;
+  height: 75px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#bar .title {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 50px;
+  line-height: 75px;
+  vertical-align: middle;
+}
+
+.title {
+  font-family: 'Aldrich', sans-serif;
+}
+
+.stuff {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 70%;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+}
+
+.word {
+  padding-left: 25px;
+}
+
+.form {
+  text-align: center;
+}
+
+
+.form input {
+  width: 80%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+

@@ -1,13 +1,18 @@
 
 <%= form_tag('/users/create', method: :post) do %>
 
-  <input type='text' name='username' placeholder='username'></input>
-  <input type='tel' name='phone'></input>
-  <input type='text' name='email' placeholder='email'></input>
-  <input type='text' name='email_confirmation' placeholder='confirm email'></input>
-  <input type='password' name='password' placeholder='password'></input>
-  <input type='password' name='password_confirmation' placeholder='confirm password'></input>
-  <input type='submit' value='create account'></input>
+  <div class='form stuff'>
+    
+    <h1 class='title'>need an account?</h1>
+    <input type='text' name='username' placeholder='username'></input>
+    <input type='tel' name='phone' placeholder='phone number'></input>
+    <input type='text' name='email' placeholder='email'></input>
+    <input type='text' name='email_confirmation' placeholder='confirm email'></input>
+    <input type='password' name='password' placeholder='password'></input>
+    <input type='password' name='password_confirmation' placeholder='confirm password'></input>
+    <input type='submit' value='create account'></input>
+
+  </div>
 
 <% end %>
 
