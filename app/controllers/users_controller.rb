@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(params.permit(:username, :email, :email_confirmation, :password, :password_confirmation))
+    user = User.create(params.permit(:username, :phone, :email, :email_confirmation, :password, :password_confirmation))
     unless user.valid?
       flash.alert = []
       user.errors.messages.each do |attribute, errors|
