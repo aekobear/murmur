@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(username: params[:username].downcase)
     if user && user.authenticate(params[:password])
-      flash.notice << "hello #{user.username}"
+      flash.notice << "hello, #{user.username}!"
       redirect_to '/'
     else
       flash.alert << 'wrong username or password'
