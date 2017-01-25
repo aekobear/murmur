@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+  post 'sessions/create'
+
   get 'users/new'
   post 'users/create'
-
-  get 'welcome/index'
 
   root 'welcome#index'
 

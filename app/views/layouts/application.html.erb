@@ -14,12 +14,20 @@
     </div>
     </div>
 
-
-    <% flash.alert.each do |alert| %>
-      <p style="color: #ff0000;"><%= alert %></p>
+    <% unless flash.alert.empty? %>
+      <div id='alerts'>
+        <% flash.alert.each do |alert| %>
+          <span class="alert"><%= alert %></span>
+        <% end %>
+      </div>
     <% end %>
-    <% flash.notice.each do |notice| %>
-      <p style="color: #0000ff;"><%= notice %></p>
+
+    <% unless flash.notice.empty? %>
+      <div id='notices'>
+        <% flash.notice.each do |notice| %>
+          <span class="notice"><%= notice %></span>
+        <% end %>
+      </div>
     <% end %>
 
     <%= yield %>
