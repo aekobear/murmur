@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       flash.alert << 'wrong username or password'
-      redirect_to action: :new
+      redirect_to controller: :home, action: :welcome
     end
   end
 

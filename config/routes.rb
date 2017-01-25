@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   get 'users/new'
   post 'users/create'
 
-  root 'welcome#index'
+
+  get '/welcome', to: 'home#welcome'
+
+  root 'home#index'
+
 
 end
