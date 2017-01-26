@@ -3,10 +3,10 @@ class HomeController < ApplicationController
   skip_before_action :authenticate, only: [ :welcome ]
   before_action :antiauthenticate, only: [ :welcome ]
 
-  def index
+  def welcome
   end
 
-  def welcome
+  def home
   end
 
 end

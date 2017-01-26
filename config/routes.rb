@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   post 'users/create'
 
 
-  get '/welcome', to: 'home#welcome'
+  get '/home', to: 'home#home'
 
-  root 'home#index'
+  root 'home#welcome'
 
 
 end

@@ -11,7 +11,18 @@
   <body>
     <div id='bar'>
       <a href= '/' class='title'>project murmur</a>
-    </div>
+      <% if @user.nil? %>
+        <div id='quicklogin'>
+          <%= form_tag('/sessions/create', method: :post) do %>
+            <input type='text' name='username' placeholder='username'></input>
+            <input type='password' name='password' placeholder='password'></input>
+            <input type='submit' value='log in'></input>
+          <% end %>
+          or <a href='/users/new'>sign up</a>
+        </div>
+      <% else %>
+        <div id='quickpanel'>logged in as <%= @user.username %>. (<a href="/sessions/destroy">log out</a>)</div>
+      <% end %>
     </div>
 
     <% unless flash.alert.empty? %>
