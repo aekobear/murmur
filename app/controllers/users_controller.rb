@@ -16,8 +16,9 @@ class UsersController < ApplicationController
       end
       return redirect_to action: :new
     end
+    log_in user
     flash.notice << "welcome, #{user.username}."
-    return redirect_to controller: :welcome, action: :home
+    return redirect_to controller: :home, action: :home
   end
 
   def show

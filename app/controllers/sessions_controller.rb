@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(username: params[:username].downcase)
     if user && user.authenticate(params[:password])
+      log_in user
       session[:user_id] = user.id
       flash.notice << "hello, #{user.username}!"
       redirect_to controller: :home, action: :home
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    reset_session
+    log_out
     flash.notice = ["you are now logged out"]
     redirect_to action: :new
   end
