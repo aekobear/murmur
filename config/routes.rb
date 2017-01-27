@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'politrees/index'
+
   get 'sessions/new'
   post 'sessions/create'
   get 'sessions/destroy'

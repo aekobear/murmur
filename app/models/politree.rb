@@ -1,0 +1,2 @@
+class Politree < ApplicationRecord
+end

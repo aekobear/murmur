@@ -1,0 +1,6 @@
+<div class='word stuff'>
+  <h1 class='title'>all politrees:</h1>
+  <% @politrees.each do |tree| %>
+    <p><b><%= tree.name %></b><%= tree.description %></p>
+  <% end %>
+</div>
