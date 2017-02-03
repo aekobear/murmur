@@ -1,0 +1,8 @@
+<div class='form stuff'>
+  <h1 class='title'>new politree</h1>
+  <%= form_tag('/politrees/create', method: 'post') do %>
+    <input type='text' name='name' placeholder='politree name'></input>
+    <input type='text' name='description' placeholder='politree description'></input>
+    <input type='submit' value='create'></input>
+  <% end %>
+</div>
