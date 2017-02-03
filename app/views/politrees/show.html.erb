@@ -1,0 +1,9 @@
+<div class='word stuff'>
+  <h1 class='title'><%= @politree.name %></h1>
+  <p><%= @politree.description %></p>
+  <hr></hr>
+  <p class='title'>(created by <%= @owner.username %>)</p>
+  <% if @user == @owner %>
+    <a href='/politrees/<%= @politree.id %>/destroy'>delete this politree?</a>
+  <% end %>
+</div>

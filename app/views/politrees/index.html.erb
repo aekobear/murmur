@@ -2,6 +2,6 @@
   <h1 class='title'>all politrees:</h1>
   <a href='/politrees/new'>create a new politree</a>
   <% @politrees.each do |tree| %>
-    <p><b><%= tree.name %></b>: <%= tree.description %></p>
+    <p><a href='/politrees/<%= tree.id %>'><%= tree.name %></a>: <%= tree.description %></p>
   <% end %>
 </div>
