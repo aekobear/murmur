@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'politrees/index'
-  get 'politrees/:id', to: 'politrees#show'
-  get 'politrees/new'
-  post 'politrees/create'
-  get 'politrees/:id/destroy', to: 'politrees#destroy'
+  resources :politrees
+  post 'politrees/:id/leave', to: 'politrees#leave'
+  post 'politrees/:id/join', to: 'politrees#join'
 
   get 'sessions/new'
   post 'sessions/create'

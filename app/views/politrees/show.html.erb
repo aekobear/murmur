@@ -4,6 +4,17 @@
   <hr></hr>
   <p class='title'>(created by <%= @owner.username %>)</p>
   <% if @user == @owner %>
-    <a href='/politrees/<%= @politree.id %>/destroy'>delete this politree?</a>
+    <%= form_tag(politree_path(@politree.id), method: :delete) do %>
+      <input type='submit' value='delete this politree?'></input>
+    <% end %>
+  <% end %>
+  <% if @membership.nil? %>
+    <%= form_tag("#{politree_path(@politree.id)}/join", method: :post) do %>
+      <input type='submit' value='join this politree?'></input>
+    <% end %>
+  <% else %>
+    <%= form_tag("#{politree_path(@politree.id)}/leave", method: :post) do %>
+      <input type='submit' value='leave this politree?'></input>
+    <% end %>
   <% end %>
 </div>

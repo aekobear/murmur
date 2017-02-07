@@ -27,7 +27,7 @@ development: &development
   host: localhost
   port: 5432
   username: postgres
-  password: <%= ENV['murmur_db_password'] %>
+  # password: <%= ENV['murmur_db_password'] %>
 
 
   # The specified database role being used to connect to postgres.
