@@ -11,6 +11,9 @@
   <body>
     <div id='bar'>
       <a href= '/' class='title'>project murmur</a>
+      <div id='nav'>
+        <%= link_to 'politrees', politrees_path %>
+      </div>
       <% if @user.nil? %>
         <div id='quicklogin'>
           <%= form_tag('/sessions/create', method: :post) do %>

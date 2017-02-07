@@ -37,6 +37,27 @@ body {
   line-height: 75px;
 }
 
+#nav{
+  margin-left: 40px;
+  display: inline-block;
+  line-height: 75px;
+  font-family: 'Aldrich', sans-serif;
+}
+#nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+}
+#nav a:visited {
+  color: #ffffff;
+}
+#nav a:hover {
+  color: #009922;
+}
+#nav a:active {
+  color: #00bb55;
+}
+
 .title {
   font-family: 'Aldrich', sans-serif;
 }

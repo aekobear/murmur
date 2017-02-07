@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     @user = User.find_by(id: session[:user_id])
     if @user.nil?
       flash.alert << 'you must be logged in to view that page!'
-      redirect_to controller: :home, action: :welcome
+      redirect_to controller: :sessions, action: :new
     end
   end
 
