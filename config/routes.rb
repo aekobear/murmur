@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :politrees
+  resources :politrees do
+    resources :issues
+  end
   post 'politrees/:id/leave', to: 'politrees#leave'
   post 'politrees/:id/join', to: 'politrees#join'
 

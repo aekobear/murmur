@@ -1,0 +1,9 @@
+<div class='form stuff'>
+  <h1 class='title'>new issue for <%= @politree.name %></h1>
+  <%= form_tag(politree_issues_path, method: 'post') do %>
+    <input type='text' name='topic' placeholder='name of issue'></input>
+    <input type='text' name='description' placeholder='description of issue'></input>
+    <input type='submit' value='create'></input>
+  <% end %>
+</div>
+
